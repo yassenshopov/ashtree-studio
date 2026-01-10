@@ -1,0 +1,68 @@
+{
+  "common": {
+    "shop": "Shop",
+    "home": "Home",
+    "instagram": "Instagram",
+    "contactUs": "Contact Us",
+    "orderNow": "Order Now",
+    "browseShop": "Browse Shop",
+    "placeOrder": "Place an Order",
+    "getStarted": "Get Started",
+    "allRightsReserved": "All rights reserved",
+    "createdBy": "Created by",
+    "features": "Features",
+    "cart": "Shopping Cart",
+    "checkout": "Checkout",
+    "emptyCart": "Your cart is empty",
+    "total": "Total",
+    "proceedToCheckout": "Proceed to Checkout",
+    "continueShopping": "Continue Shopping",
+    "remove": "Remove item"
+  },
+  "home": {
+    "title": "Custom 3D Prints",
+    "subtitle": "Bring your ideas to life with precision 3D printing. Order custom prints tailored to your needs.",
+    "getStartedTitle": "Get Started",
+    "getStartedDescription": "Ready to create something unique? Get in touch to discuss your project."
+  },
+  "shop": {
+    "title": "Shop",
+    "subtitle": "Explore our collection of custom 3D printed products. Each piece is crafted with precision and care.",
+    "customOrders": {
+      "title": "Custom Orders",
+      "description": "Have a unique idea? We're always open to custom projects and special requests.",
+      "info": "All products are made to order. Contact us to discuss your specific requirements, customization options, and delivery timeline.",
+      "contactButton": "Contact for Custom Orders"
+    },
+    "products": {
+      "github": {
+        "name": "GitHub Contribution Graph",
+        "description": "Transform your coding journey into a stunning 3D printed sculpture. This unique piece visualizes your GitHub contribution history as an elegant 3D model, perfect for your desk or as a conversation starter.",
+        "features": [
+          "Customizable color schemes",
+          "Multiple size options",
+          "High-quality 3D printing",
+          "Includes mounting hardware"
+        ],
+        "badge": "Popular",
+        "price": "Starting at $49"
+      },
+      "strava": {
+        "name": "Strava Routes",
+        "description": "Preserve your favorite running, cycling, or hiking routes as beautiful 3D topographic prints. Each route is carefully rendered with elevation data, creating a unique piece of art that tells your story.",
+        "features": [
+          "Topographic elevation mapping",
+          "Custom route selection",
+          "Multiple material options",
+          "Personalized with route name"
+        ],
+        "badge": "New",
+        "price": "Starting at $59"
+      }
+    }
+  },
+  "metadata": {
+    "title": "Ashtree Studio - Custom 3D Printing",
+    "description": "Order custom 3D prints tailored to your needs. Bring your ideas to life with precision 3D printing."
+  }
+}

@@ -1,182 +1,132 @@
-import Image from "next/image";
 import ThemeToggle from './components/ThemeToggle'
+import Logo from './components/Logo'
+import DotGrid from './components/DotGrid'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-950">
+    <div className="min-h-screen relative">
+      <DotGrid />
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/70 dark:bg-slate-900/70 border-b border-blue-100 dark:border-blue-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="border-b border-border">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <a href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+            <a href="/" className="flex items-center gap-3">
+              <Logo width={140} height={40} className="h-8 w-auto" />
+              <span className="text-xl font-heading font-semibold text-foreground">
                 Ashtree Studio
               </span>
             </a>
-            
-            <nav className="hidden sm:flex items-center space-x-8">
-              <a href="#work" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Work
-              </a>
-              <a href="#services" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Services
-              </a>
-              <a href="#about" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                About
-              </a>
-              <a href="#contact" className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-500 dark:hover:to-purple-500 transition-all duration-300">
-                Contact
+            <div className="flex items-center gap-4">
+              <a
+                href="/shop"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Shop
               </a>
               <ThemeToggle />
-            </nav>
-
-            {/* Mobile menu button */}
-            <button className="sm:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Adjust main padding to account for fixed header */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
-        <div className="text-center sm:text-left">
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight text-slate-900 dark:text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-            Ashtree Studio
+      {/* Main Content */}
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Hero Section */}
+        <div className="text-center space-y-8 mb-20">
+          <h1 className="text-5xl sm:text-6xl font-bold text-foreground tracking-tight">
+            Custom 3D Prints
           </h1>
-          <p className="text-lg sm:text-xl text-slate-700 dark:text-slate-300 max-w-2xl mb-8">
-            Crafting digital experiences that leave lasting impressions. We blend creativity 
-            with precision to bring your vision to life.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Bring your ideas to life with precision 3D printing. 
+            Order custom prints tailored to your needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#work"
-              className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-500 dark:hover:to-purple-500 transition-all duration-300"
+              href="/shop"
+              className="inline-flex items-center px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
             >
-              View Our Work
+              Browse Shop
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center px-6 py-3 rounded-full border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-slate-900 transition-all duration-300"
+              href="#order"
+              className="inline-flex items-center px-8 py-3 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors font-medium"
             >
-              Get in Touch
+              Place an Order
             </a>
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-24">
-          {['Design', 'Development', 'Branding'].map((service) => (
-            <div 
-              key={service} 
-              className="p-6 rounded-2xl backdrop-blur-sm bg-white/50 dark:bg-slate-800/50 border border-blue-100 dark:border-blue-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 hover:shadow-lg hover:shadow-blue-100/20 dark:hover:shadow-blue-900/30"
-            >
-              <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">{service}</h3>
-              <p className="text-slate-600 dark:text-slate-400">
-                Innovative solutions that elevate your brand and engage your audience.
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Featured Work Section */}
-        <section id="work" className="mt-32">
-          <h2 className="text-3xl font-bold mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-            Featured Projects
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[1, 2, 3, 4].map((project) => (
-              <div 
-                key={project}
-                className="group relative overflow-hidden rounded-2xl aspect-video bg-slate-100 dark:bg-slate-800 hover:shadow-xl transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-xl font-semibold text-white mb-2">Project {project}</h3>
-                    <p className="text-slate-200 mb-4">Brand identity & website design</p>
-                    <a href="#" className="inline-flex items-center text-white hover:text-blue-400 transition-colors">
-                      View Case Study
-                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* About Section */}
-        <section id="about" className="mt-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-                About Ashtree Studio
-              </h2>
-              <p className="text-slate-700 dark:text-slate-300">
-                We're a collective of passionate designers and developers, dedicated to crafting exceptional digital experiences that make a lasting impact.
-              </p>
-              <div className="grid grid-cols-3 gap-6 pt-6">
-                <div>
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">50+</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Projects Completed</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">12+</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Team Members</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">98%</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Client Satisfaction</div>
-                </div>
-              </div>
-            </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800">
-              {/* Add your team image here */}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section id="contact" className="mt-32">
-          <div className="rounded-3xl backdrop-blur-sm bg-white/50 dark:bg-slate-800/50 border border-blue-100 dark:border-blue-800 p-8 md:p-12">
-            <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
-              Let's Work Together
+        {/* Order Section */}
+        <section id="order" className="mt-32">
+          <div className="border border-border rounded-lg p-8 sm:p-12 bg-card">
+            <h2 className="text-2xl font-semibold mb-6 text-foreground">
+              Get Started
             </h2>
-            <p className="text-slate-700 dark:text-slate-300">
-              We're always looking for new projects and collaborations. Whether you're a startup, a small business, or an established brand, we'd love to hear from you.
+            <p className="text-muted-foreground mb-8">
+              Ready to create something unique? Get in touch to discuss your project.
             </p>
-            <a href="mailto:contact@ashtreestudio.com" className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 dark:hover:from-blue-500 dark:hover:to-purple-500 transition-all duration-300">
-              Get in Touch
+            <a
+              href="mailto:orders@ashtreestudio.com"
+              className="inline-flex items-center px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+            >
+              Contact Us
             </a>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-blue-100 dark:border-blue-800 backdrop-blur-sm bg-white/30 dark:bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              © {new Date().getFullYear()} Ashtree Studio. All rights reserved.
-            </p>
-            <div className="flex gap-6">
-              <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+      <footer className="border-t border-border mt-32">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex items-center gap-3">
+              <Logo width={120} height={35} className="h-7 w-auto" />
+              <span className="text-lg font-heading font-semibold text-foreground">
+                Ashtree Studio
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <a
+                href="https://www.instagram.com/ashtree_studio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
                 Instagram
               </a>
-              <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                Twitter
+              <a
+                href="tel:+359882764788"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                +359 88 276 4788
               </a>
-              <a href="#" className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                LinkedIn
+              <a
+                href="mailto:yassenshopov00@gmail.com"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                yassenshopov00@gmail.com
               </a>
             </div>
+            <p className="text-sm text-muted-foreground text-center">
+              © {new Date().getFullYear()} Ashtree Studio. All rights reserved.
+            </p>
+            <p className="text-sm text-muted-foreground text-center">
+              Created by{' '}
+              <a
+                href="https://www.linkedin.com/in/yassenshopov"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-foreground transition-colors"
+              >
+                Yassen Shopov
+              </a>
+            </p>
           </div>
         </div>
       </footer>
     </div>
   );
 }
+
+
+
