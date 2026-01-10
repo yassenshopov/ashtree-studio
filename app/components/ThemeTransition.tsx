@@ -64,8 +64,8 @@ export default function ThemeTransition() {
   const transition = useTransitionState()
   const [radius, setRadius] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
-  const animationRef = useRef<number>()
-  const timeoutRef = useRef<NodeJS.Timeout>()
+  const animationRef = useRef<number | undefined>(undefined)
+  const timeoutRef = useRef<NodeJS.Timeout | undefined>(undefined)
   const themeChangedRef = useRef(false)
   const hasStartedRef = useRef(false)
 
