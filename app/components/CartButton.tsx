@@ -32,6 +32,7 @@ export default function CartButton() {
         checkoutButtonLabel={t('proceedToCheckout')}
         continueShoppingLabel={t('continueShopping')}
         removeLabel={t('remove')}
+        browseShopLabel={t('browseShop')}
       />
     </>
   );
