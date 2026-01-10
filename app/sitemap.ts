@@ -5,6 +5,7 @@ import { locales } from '@/i18n';
 const staticRoutes = [
   '', // home page
   '/shop', // shop page
+  '/contact', // contact page
   '/terms', // terms of service page
   '/privacy', // privacy policy page
 ];

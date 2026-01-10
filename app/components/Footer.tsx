@@ -8,7 +8,7 @@ export default async function Footer() {
   return (
     <footer className="border-t border-border mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <Logo width={120} height={35} className="h-7 w-auto" />
@@ -21,43 +21,8 @@ export default async function Footer() {
             <h4 className="font-semibold mb-4 text-foreground">About</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link href="/" className="hover:text-foreground transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-foreground transition-colors">
-                  Meet The Team
-                </Link>
-              </li>
-              <li>
-                <a href="mailto:orders@ashtreestudio.com" className="hover:text-foreground transition-colors">
+                <Link href="/contact" className="hover:text-foreground transition-colors">
                   Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-semibold mb-4 text-foreground">Support</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>
-                <a href="mailto:orders@ashtreestudio.com" className="hover:text-foreground transition-colors">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-foreground transition-colors">
-                  Shipping
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-foreground transition-colors">
-                  Return
-                </Link>
-              </li>
-              <li>
-                <Link href="/" className="hover:text-foreground transition-colors">
-                  FAQ
                 </Link>
               </li>
             </ul>
