@@ -18,7 +18,8 @@
     "proceedToCheckout": "Proceed to Checkout",
     "continueShopping": "Continue Shopping",
     "remove": "Remove item",
-    "browseShop": "Browse Shop"
+    "browseShop": "Browse Shop",
+    "itemAddedToCart": "Added to cart!"
   },
   "home": {
     "title": "Custom 3D Prints",
@@ -65,5 +66,140 @@
   "metadata": {
     "title": "Ashtree Studio - Custom 3D Printing",
     "description": "Order custom 3D prints tailored to your needs. Bring your ideas to life with precision 3D printing."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Terms and conditions for using Ashtree Studio's custom 3D printing services",
+    "lastUpdated": "Last Updated",
+    "lastUpdatedDate": "January 2026",
+    "sections": {
+      "1": {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing and using the Ashtree Studio website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service."
+      },
+      "2": {
+        "title": "2. Use License",
+        "content": "Permission is granted to temporarily access and use Ashtree Studio's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:",
+        "items": [
+          "Modify or copy the materials",
+          "Use the materials for any commercial purpose or for any public display",
+          "Attempt to decompile or reverse engineer any software contained on the website",
+          "Remove any copyright or other proprietary notations from the materials"
+        ]
+      },
+      "3": {
+        "title": "3. Products and Services",
+        "content": "Ashtree Studio provides custom 3D printing services. All products are made to order based on customer specifications. We reserve the right to refuse any order that we deem inappropriate, illegal, or that violates our ethical standards. Product images and descriptions are for illustrative purposes and actual products may vary."
+      },
+      "4": {
+        "title": "4. Orders and Payment",
+        "content": "When you place an order, you agree to provide accurate and complete information. All orders are subject to acceptance by Ashtree Studio. We reserve the right to refuse or cancel any order for any reason, including but not limited to product availability, errors in pricing or product information, or fraud. Payment terms will be specified at the time of order confirmation.",
+        "items": [
+          "All prices are in USD unless otherwise stated",
+          "Payment is required before production begins",
+          "We accept payment via methods specified during checkout",
+          "Refunds are subject to our refund policy"
+        ]
+      },
+      "5": {
+        "title": "5. Shipping and Delivery",
+        "content": "Shipping costs and delivery times will be communicated at the time of order. Ashtree Studio is not responsible for delays caused by shipping carriers or customs. Risk of loss and title for products pass to you upon delivery to the carrier. You are responsible for providing accurate shipping information."
+      },
+      "6": {
+        "title": "6. Returns and Refunds",
+        "content": "Due to the custom nature of our products, returns are generally not accepted unless the product is defective or significantly different from what was ordered. Refund requests must be submitted within 14 days of delivery. Custom orders that have entered production may not be eligible for refunds. Please contact us at orders@ashtreestudio.com for any return or refund inquiries."
+      },
+      "7": {
+        "title": "7. Intellectual Property",
+        "content": "All content on this website, including but not limited to text, graphics, logos, images, and software, is the property of Ashtree Studio or its content suppliers and is protected by copyright and other intellectual property laws. You may not reproduce, distribute, or create derivative works from any content without express written permission."
+      },
+      "8": {
+        "title": "8. User Content",
+        "content": "If you submit any content to us (including but not limited to design files, images, or specifications), you grant Ashtree Studio a non-exclusive, royalty-free, perpetual, and worldwide license to use, reproduce, modify, and display such content for the purpose of fulfilling your order and improving our services."
+      },
+      "9": {
+        "title": "9. Limitation of Liability",
+        "content": "Ashtree Studio shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the service, or for the cost of procurement of substitute services. Our total liability shall not exceed the amount you paid for the specific product or service."
+      },
+      "10": {
+        "title": "10. Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless Ashtree Studio, its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the service, violation of these terms, or infringement of any rights of another."
+      },
+      "11": {
+        "title": "11. Modifications to Terms",
+        "content": "Ashtree Studio reserves the right to modify these terms at any time. We will notify users of any material changes by posting the new terms on this page. Your continued use of the service after such modifications constitutes acceptance of the updated terms."
+      },
+      "12": {
+        "title": "12. Governing Law",
+        "content": "These terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Ashtree Studio operates, without regard to its conflict of law provisions. Any disputes arising from these terms shall be resolved through appropriate legal channels."
+      }
+    },
+    "contact": "If you have any questions about these Terms of Service, please contact us at"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Privacy policy explaining how Ashtree Studio collects, uses, and protects your personal information",
+    "lastUpdated": "Last Updated",
+    "lastUpdatedDate": "January 2026",
+    "sections": {
+      "1": {
+        "title": "1. Introduction",
+        "content": "Ashtree Studio ('we', 'our', or 'us') is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services. Please read this policy carefully to understand our practices regarding your personal data."
+      },
+      "2": {
+        "title": "2. Information We Collect",
+        "content": "We collect information that you provide directly to us and information that is automatically collected when you use our services:",
+        "items": [
+          "Personal Information: Name, email address, phone number, shipping address, and billing information when you place an order",
+          "Order Information: Product specifications, design files, customization requests, and order history",
+          "Communication Data: Messages, emails, and other communications you send to us",
+          "Technical Data: IP address, browser type, device information, and usage patterns collected automatically",
+          "Cookies and Tracking: We use cookies and similar tracking technologies to enhance your experience"
+        ]
+      },
+      "3": {
+        "title": "3. How We Use Your Information",
+        "content": "We use the information we collect for various purposes, including:",
+        "items": [
+          "Processing and fulfilling your orders",
+          "Communicating with you about your orders, products, and services",
+          "Improving our website, products, and customer service",
+          "Sending you marketing communications (with your consent) and responding to your inquiries"
+        ]
+      },
+      "4": {
+        "title": "4. Information Sharing and Disclosure",
+        "content": "We do not sell your personal information. We may share your information only in the following circumstances: (1) with service providers who assist us in operating our business (such as payment processors and shipping companies), (2) when required by law or to protect our rights, (3) in connection with a business transfer, or (4) with your explicit consent."
+      },
+      "5": {
+        "title": "5. Data Security",
+        "content": "We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security."
+      },
+      "6": {
+        "title": "6. Data Retention",
+        "content": "We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Order information is typically retained for at least 7 years for accounting and legal purposes."
+      },
+      "7": {
+        "title": "7. Your Rights and Choices",
+        "content": "Depending on your location, you may have certain rights regarding your personal information, including: (1) the right to access and receive a copy of your personal data, (2) the right to rectify inaccurate data, (3) the right to request deletion of your data, (4) the right to object to processing, and (5) the right to data portability. To exercise these rights, please contact us at orders@ashtreestudio.com."
+      },
+      "8": {
+        "title": "8. Cookies and Tracking Technologies",
+        "content": "We use cookies and similar tracking technologies to track activity on our website and store certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our service."
+      },
+      "9": {
+        "title": "9. Third-Party Links",
+        "content": "Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit."
+      },
+      "10": {
+        "title": "10. Children's Privacy",
+        "content": "Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately so we can delete such information."
+      },
+      "11": {
+        "title": "11. Changes to This Privacy Policy",
+        "content": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the 'Last Updated' date. You are advised to review this Privacy Policy periodically for any changes."
+      }
+    },
+    "contact": "If you have any questions about this Privacy Policy, please contact us at"
   }
 }

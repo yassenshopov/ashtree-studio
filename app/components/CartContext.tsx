@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback, ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, ReactNode, useEffect } from 'react';
 
 export interface Product {
   id: string;
@@ -11,6 +11,7 @@ export interface Product {
   badge: string;
   price: string;
   contactLink: string;
+  image?: string;
 }
 
 export interface CartItem {
@@ -27,6 +28,7 @@ interface CartContextType {
   getTotalItems: () => number;
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
+  lastAddedProduct: Product | null;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -43,21 +45,64 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
+const CART_STORAGE_KEY = 'ashtree-studio-cart';
+
+function loadCartFromStorage(): CartItem[] {
+  if (typeof window === 'undefined') return [];
+  
+  try {
+    const stored = localStorage.getItem(CART_STORAGE_KEY);
+    if (stored) {
+      return JSON.parse(stored);
+    }
+  } catch (error) {
+    console.error('Failed to load cart from localStorage:', error);
+  }
+  return [];
+}
+
+function saveCartToStorage(items: CartItem[]): void {
+  if (typeof window === 'undefined') return;
+  
+  try {
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+  } catch (error) {
+    console.error('Failed to save cart to localStorage:', error);
+  }
+}
+
 export function CartProvider({ children }: CartProviderProps) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [lastAddedProduct, setLastAddedProduct] = useState<Product | null>(null);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  // Load cart from localStorage on mount
+  useEffect(() => {
+    const savedCart = loadCartFromStorage();
+    setItems(savedCart);
+    setIsHydrated(true);
+  }, []);
+
+  // Save cart to localStorage whenever items change (after hydration)
+  useEffect(() => {
+    if (isHydrated) {
+      saveCartToStorage(items);
+    }
+  }, [items, isHydrated]);
 
   const addToCart = useCallback((product: Product) => {
+    setLastAddedProduct(product);
     setItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.product.id === product.id);
-      if (existingItem) {
-        return prevItems.map((item) =>
-          item.product.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      }
-      return [...prevItems, { product, quantity: 1 }];
+      const newItems = existingItem
+        ? prevItems.map((item) =>
+            item.product.id === product.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          )
+        : [...prevItems, { product, quantity: 1 }];
+      return newItems;
     });
   }, []);
 
@@ -79,6 +124,9 @@ export function CartProvider({ children }: CartProviderProps) {
 
   const clearCart = useCallback(() => {
     setItems([]);
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem(CART_STORAGE_KEY);
+    }
   }, []);
 
   const getTotalItems = useCallback(() => {
@@ -96,6 +144,7 @@ export function CartProvider({ children }: CartProviderProps) {
         getTotalItems,
         isOpen,
         setIsOpen,
+        lastAddedProduct,
       }}
     >
       {children}

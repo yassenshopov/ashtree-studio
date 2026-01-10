@@ -11,6 +11,7 @@ import ThemeTransition from '../components/ThemeTransition';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { CartProvider } from '../components/CartContext';
+import { Toaster } from '@/components/ui/sonner';
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -73,6 +74,7 @@ export default async function LocaleLayout({
             </CartProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
+        <Toaster />
         <Analytics />
       </body>
     </html>
