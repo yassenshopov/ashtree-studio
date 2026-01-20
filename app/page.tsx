@@ -4,7 +4,7 @@ import DotGrid from './components/DotGrid'
 
 export default function Home() {
   return (
-    <div className="min-h-screen relative">
+    <div className="relative">
       <DotGrid />
       {/* Header */}
       <header className="border-b border-border">
@@ -63,8 +63,7 @@ export default function Home() {
               Get Started
             </h2>
             <p className="text-muted-foreground mb-8">
-              Ready to create something unique? Get in touch to discuss your project.
-            </p>
+              Please include your github username in the message (e.g. @yassenshopov) and we will email you back soon with a link to the preview and the payment page.              </p>
             <a
               href="mailto:orders@ashtreestudio.com"
               className="inline-flex items-center px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
@@ -127,6 +126,7 @@ export default function Home() {
     </div>
   );
 }
+
 
 
 

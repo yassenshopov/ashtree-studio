@@ -26,16 +26,16 @@ export default async function ContactPage({
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen relative">
+    <div className="relative">
       <DotGrid />
       <main className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-8">
           <div className="text-center space-y-4 mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground">
-              Contact Us
+              Contact us
             </h1>
             <p className="text-muted-foreground">
-              Have a question or want to get in touch? Send us a message and we'll respond as soon as possible.
+              Questions about the GitHub Contribution Chart Print? It&apos;s the only available product right now, so feel free to reach out here.
             </p>
           </div>
 

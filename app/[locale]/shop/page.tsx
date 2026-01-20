@@ -18,7 +18,7 @@ export default async function Shop({
   const tCommon = await getTranslations('common');
 
   return (
-    <div className="min-h-screen relative">
+    <div className="relative">
       <DotGrid />
       {/* Hero Section */}
       <section className="relative bg-muted/30 py-20 md:py-32">

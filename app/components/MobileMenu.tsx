@@ -15,10 +15,11 @@ import ThemeToggle from './ThemeToggle';
 
 interface MobileMenuProps {
   homeLabel: string;
+  aboutLabel: string;
   shopLabel: string;
 }
 
-export default function MobileMenu({ homeLabel, shopLabel }: MobileMenuProps) {
+export default function MobileMenu({ homeLabel, aboutLabel, shopLabel }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -42,6 +43,13 @@ export default function MobileMenu({ homeLabel, shopLabel }: MobileMenuProps) {
             className="text-base font-medium text-foreground hover:text-primary transition-colors py-2"
           >
             {homeLabel}
+          </Link>
+          <Link
+            href="/about"
+            onClick={() => setOpen(false)}
+            className="text-base font-medium text-foreground hover:text-primary transition-colors py-2"
+          >
+            {aboutLabel}
           </Link>
           <Link
             href="/shop"

@@ -4,6 +4,7 @@ import { locales } from '@/i18n';
 // Define all static routes in your application
 const staticRoutes = [
   '', // home page
+  '/about', // about page
   '/shop', // shop page
   '/contact', // contact page
   '/terms', // terms of service page

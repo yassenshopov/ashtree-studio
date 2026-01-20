@@ -7,10 +7,11 @@ import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 
 export default function ContactForm() {
+  const defaultSubject = 'GitHub Contribution Chart Print inquiry';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    subject: defaultSubject,
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -48,7 +49,7 @@ export default function ContactForm() {
       setFormData({
         name: '',
         email: '',
-        subject: '',
+        subject: defaultSubject,
         message: '',
       });
     } catch (error) {

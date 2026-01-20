@@ -28,7 +28,7 @@ export default async function PrivacyPolicy({
   const t = await getTranslations('privacy');
 
   return (
-    <div className="min-h-screen relative">
+    <div className="relative">
       <DotGrid />
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-8">

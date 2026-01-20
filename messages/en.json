@@ -2,6 +2,7 @@
   "common": {
     "shop": "Shop",
     "home": "Home",
+    "about": "About",
     "instagram": "Instagram",
     "contactUs": "Contact Us",
     "orderNow": "Order Now",
@@ -31,7 +32,16 @@
     "title": "Custom 3D Prints",
     "subtitle": "Bring your ideas to life with precision 3D printing. Order custom prints tailored to your needs.",
     "getStartedTitle": "Get Started",
-    "getStartedDescription": "Ready to create something unique? Get in touch to discuss your project."
+    "getStartedDescription": "Please include your github username in the message (e.g. @yassenshopov) and we will email you back soon with a link to the preview and the payment page."
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "We are a small boutique 3D print studio based in Sofia, Bulgaria.",
+    "description": "Ashtree Studio focuses on thoughtful, precise fabrication for creators, designers, and small businesses. We combine craftsmanship with modern 3D printing to deliver custom parts and one-off pieces with care.",
+    "locationTitle": "Find us in Sofia, Bulgaria",
+    "locationDescription": "Our studio is located in Sofia, at the heart of Bulgaria's maker community.",
+    "mapTitle": "Map of Sofia, Bulgaria",
+    "mapCta": "View larger map"
   },
   "shop": {
     "title": "Shop",

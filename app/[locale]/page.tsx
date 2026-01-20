@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import DotGrid from '../components/DotGrid'
 import STLViewer from '../components/STLViewer'
 import ContactForm from '../components/ContactForm'
+import BentoGallery from '../components/BentoGallery'
 
 export default async function Home({
   params
@@ -15,7 +16,7 @@ export default async function Home({
   const tCommon = await getTranslations('common');
 
   return (
-    <div className="min-h-screen relative">
+    <div className="relative">
       <DotGrid />
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -42,6 +43,11 @@ export default async function Home({
             </div>
           </div>
         </div>
+
+        {/* Bento Image Grid */}
+        <section className="mt-16">
+          <BentoGallery />
+        </section>
 
         {/* Contact Form Section */}
         <section id="order" className="mt-32">

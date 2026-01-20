@@ -41,7 +41,7 @@ export default function Shop() {
   ]
 
   return (
-    <div className="min-h-screen relative">
+    <div className="relative">
       <DotGrid />
       {/* Header */}
       <header className="border-b border-border">

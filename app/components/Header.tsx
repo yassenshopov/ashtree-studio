@@ -27,6 +27,12 @@ export default async function Header() {
               {tCommon('home')}
             </Link>
             <Link
+              href="/about"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {tCommon('about')}
+            </Link>
+            <Link
               href="/shop"
               className="text-sm font-medium text-foreground"
             >
@@ -43,6 +49,7 @@ export default async function Header() {
             </div>
             <MobileMenu 
               homeLabel={tCommon('home')}
+              aboutLabel={tCommon('about')}
               shopLabel={tCommon('shop')}
             />
           </div>
