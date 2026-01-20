@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Outfit, Inter } from "next/font/google";
 import "../globals.css";
 import { ThemeProvider } from 'next-themes';
@@ -61,6 +62,20 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-TPWCRSKX14"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-TPWCRSKX14');
+          `}
+        </Script>
+      </head>
       <body
         className={`${outfit.variable} ${inter.variable} font-sans antialiased`}
       >
