@@ -2,7 +2,40 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useTheme } from "next-themes";
-import { CircleMarker, MapContainer, TileLayer } from "react-leaflet";
+import dynamic from "next/dynamic";
+import type {
+  CircleMarkerProps,
+  MapContainerProps,
+  TileLayerProps,
+} from "react-leaflet";
+
+type MapContainerWithCenterProps = MapContainerProps & {
+  center: [number, number];
+  zoom?: number;
+  scrollWheelZoom?: boolean;
+  zoomControl?: boolean;
+};
+
+type TileLayerWithAttributionProps = TileLayerProps & {
+  attribution?: string;
+};
+
+type CircleMarkerWithRadiusProps = CircleMarkerProps & {
+  radius?: number;
+};
+
+const MapContainer = dynamic<MapContainerWithCenterProps>(
+  () => import("react-leaflet").then((module) => module.MapContainer),
+  { ssr: false }
+);
+const TileLayer = dynamic<TileLayerWithAttributionProps>(
+  () => import("react-leaflet").then((module) => module.TileLayer),
+  { ssr: false }
+);
+const CircleMarker = dynamic<CircleMarkerWithRadiusProps>(
+  () => import("react-leaflet").then((module) => module.CircleMarker),
+  { ssr: false }
+);
 
 const LOCATION = {
   lat: 42.6977,

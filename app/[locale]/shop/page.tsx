@@ -1,8 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import DotGrid from '../../components/DotGrid'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Clock, Mail, Sparkles } from 'lucide-react'
+import { Clock, Sparkles } from 'lucide-react'
 
 export default async function Shop({
   params,
@@ -63,28 +61,6 @@ export default async function Shop({
             </div>
           </div>
 
-          {/* Info Card */}
-          <Card className="bg-muted/50 border-border/50">
-            <CardHeader>
-              <CardTitle className="flex items-center justify-center gap-2">
-                <Mail className="h-5 w-5" />
-                {t('comingSoon.contactTitle')}
-              </CardTitle>
-              <CardDescription className="text-base">
-                {t('comingSoon.contactDescription')}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-sm text-muted-foreground">
-                {t('comingSoon.contactInfo')}
-              </p>
-              <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
-                <a href="mailto:orders@ashtreestudio.com?subject=Shop Inquiry">
-                  {t('comingSoon.contactButton')}
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </main>
     </div>
