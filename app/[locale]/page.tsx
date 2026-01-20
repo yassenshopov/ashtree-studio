@@ -1,7 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Link } from '@/navigation';
 import DotGrid from '../components/DotGrid'
 import STLViewer from '../components/STLViewer'
+import ContactForm from '../components/ContactForm'
 
 export default async function Home({
   params
@@ -32,16 +32,10 @@ export default async function Home({
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mt-4">
               {t('subtitle')}
             </p>
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/shop"
-                className="inline-flex items-center px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-              >
-                {tCommon('browseShop')}
-              </Link>
+            <div className="pt-4 flex items-center justify-center">
               <a
                 href="#order"
-                className="inline-flex items-center px-8 py-3 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground transition-colors font-medium"
+                className="inline-flex items-center px-8 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
               >
                 {tCommon('placeOrder')}
               </a>
@@ -49,7 +43,7 @@ export default async function Home({
           </div>
         </div>
 
-        {/* Order Section */}
+        {/* Contact Form Section */}
         <section id="order" className="mt-32">
           <div className="border border-border rounded-lg p-8 sm:p-12 bg-card">
             <h2 className="text-2xl font-semibold mb-6 text-foreground">
@@ -58,12 +52,7 @@ export default async function Home({
             <p className="text-muted-foreground mb-8">
               {t('getStartedDescription')}
             </p>
-            <a
-              href="mailto:orders@ashtreestudio.com"
-              className="inline-flex items-center px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
-            >
-              {tCommon('contactUs')}
-            </a>
+            <ContactForm />
           </div>
         </section>
       </main>

@@ -28,16 +28,17 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      // Here you would typically send the form data to your backend/API
-      // For now, we'll simulate an API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      // In a real application, you would do something like:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
 
       toast.success('Message sent!', {
         description: 'Thank you for contacting us. We will get back to you soon.',
@@ -52,7 +53,7 @@ export default function ContactForm() {
       });
     } catch (error) {
       toast.error('Error', {
-        description: 'Failed to send message. Please try again.',
+        description: error instanceof Error ? error.message : 'Failed to send message. Please try again.',
       });
     } finally {
       setIsSubmitting(false);
