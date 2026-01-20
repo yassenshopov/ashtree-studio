@@ -74,5 +74,9 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "optionalDependencies": {
+    "@parcel/watcher-linux-x64-glibc": "^2.5.1",
+    "@parcel/watcher-linux-x64-musl": "^2.5.1"
   }
 }
