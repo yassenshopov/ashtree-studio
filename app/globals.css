@@ -90,3 +90,18 @@
     @apply font-heading;
   }
 }
+
+@layer base {
+  .dark .leaflet-container {
+    color: hsl(var(--foreground));
+  }
+
+  .dark .leaflet-control-attribution {
+    background: rgba(15, 23, 42, 0.75);
+    color: hsl(var(--foreground));
+  }
+
+  .dark .leaflet-control-attribution a {
+    color: hsl(var(--primary));
+  }
+}
